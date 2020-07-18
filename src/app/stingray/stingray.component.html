@@ -1,0 +1,56 @@
+<head>
+  <link
+    href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    rel="stylesheet"
+    id="bootstrap-css"
+  />
+
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!------ Include the above in your HEAD tag ---------->
+  <title>Stingray Software Team</title>
+</head>
+
+
+<body>
+  <div style="display: inline-block;" class="fade-in">
+    <img
+      src="assets/images/desk_parallax_prog.jpg"
+      appParallax
+      [ratio]="0.8"
+      id="parallaxImage"
+
+    />
+
+    <header>
+      <app-navbar></app-navbar>
+    </header>
+
+    <div class="row" id="mainCard">
+      <div class="col-sm">
+        <app-maincard></app-maincard>
+      </div>
+    </div>
+
+    <div class="col" style="padding-bottom: 10%;">
+      <app-about></app-about>
+    </div>
+  </div>
+
+
+
+  <app-productcards></app-productcards>
+
+
+
+  <!--
+  <div class="form-popup" id="mesagePopup">
+    <form class="form-container">
+      <h4>Stingray Software Team is donating 10% of the profts to WFP!</h4>
+      <button class="btn cancel" (click)="closeMessage()">
+        Schließen
+      </button>
+    </form>
+  </div>
+ -->
+</body>

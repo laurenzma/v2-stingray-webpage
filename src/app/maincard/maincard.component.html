@@ -1,0 +1,224 @@
+<div class="container my-5 py-5 z-depth-1" id="mainCard" >
+  <!--Section: Content-->
+  <section class="px-md-5 mx-md-5 text-center white-text" id="informationCard" >
+    <!--Grid row-->
+    <div class="row d-flex justify-content-center">
+      <!--Grid column-->
+      <div class="col-xl-6 col-md-8">
+        <h1>
+          Maßgeschneiderte Applikationen und Designs für Ihr Unternehmen.
+        </h1>
+
+        <!--  <h4>
+          Wir bemühen uns stets so agil und fair wie möglich zu entwickeln.
+        </h4>
+ -->
+        <div (click)="showContactForm()" role="button" class="formButtons">
+          <h4>Kontakt aufnehmen</h4>
+        </div>
+      </div>
+      <!--Grid column-->
+    </div>
+    <!--Grid row-->
+
+    <!--Grid row-->
+    <div class="row">
+      <!--First column-->
+      <div class="col-lg-3 col-md-6">
+        <i class="fas fa-cogs fa-3x"></i>
+
+        <p class="font-weight-bold my-3">Agile Vorgehensweiße</p>
+
+        <p class="text-muted">
+          Laufender Kontakt während der Entwicklungsphase.
+        </p>
+      </div>
+
+      <!--/First column-->
+
+      <!--Second column-->
+
+      <div class="col-lg-3 col-md-6">
+        <i class="fas fa-asterisk  fa-3x"></i>
+
+        <p class="font-weight-bold my-3">Design</p>
+
+        <p class="text-muted">
+          Sie entscheiden genau, wie das Design aussehen soll.
+        </p>
+      </div>
+
+      <!--/Second column-->
+
+      <!--Third column-->
+      <div class="col-lg-3 col-md-6">
+        <i class="fas fa-bullseye
+         fa-3x"></i>
+
+        <p class="font-weight-bold my-3">Meetingstandorte</p>
+
+        <p class="text-muted">
+          Meetingstandorte in Linz, Wels und Pollham.
+        </p>
+      </div>
+      <!--/Third column-->
+
+      <!--Fourth column-->
+      <div class="col-lg-3 col-md-6">
+        <i class="fas fa-cloud-upload-alt fa-3x"></i>
+
+        <p class="font-weight-bold my-3">Hosting & Datenbanken</p>
+
+        <p class="text-muted">
+          Witr übernehmen Hosting und benötigte Serverdatenbanken
+        </p>
+      </div>
+      <!--/Fourth column-->
+    </div>
+    <!--/Grid row-->
+  </section>
+  <!--Section: Content-->
+
+  <section
+    class="px-md-5 mx-md-5 text-center white-text"
+    id="contactCard"
+    style="display: none;"
+  >
+    <!--Section: Contact v.2-->
+    <section class="mb-4">
+      <!--Section heading-->
+      <div class="formButtons" role="button" (click)="hideContactForm()">
+        <h5>Zurück</h5>
+      </div>
+      <h2 class="h1-responsive font-weight-bold text-center my-4">
+        Kontakt aufnehmen
+      </h2>
+      <!--Section description-->
+      <p class="text-center w-responsive mx-auto mb-5">
+        Schreiben Sie uns einfach eine Nachricht, wenn Sie mit uns arbeiten wollen.
+      </p>
+
+      <div class="row">
+        <!--Grid column-->
+        <div class="col-md-9 mb-md-0 mb-5">
+          <form
+            id="contact-form"
+            name="contact-form"
+            [formGroup]="contactForm"
+            (ngSubmit)="onSubmit()"
+          >
+            <!--Grid row-->
+            <div class="row">
+              <!--Grid column-->
+              <div class="col-md-6">
+                <div class="md-form mb-0">
+                  <input
+                    type="text"
+                    formControlName="contactFormName"
+                    id="defaultContactFormName"
+                    type="text"
+                    name="name"
+                    class="form-control"
+                  />
+                  <label for="name" class="">Ihr Name</label>
+                </div>
+              </div>
+              <!--Grid column-->
+
+              <!--Grid column-->
+              <div class="col-md-6">
+                <div class="md-form mb-0">
+                  <input
+                    type="email"
+                    formControlName="contactFormEmail"
+                    id="defaultContactFormEmail"
+                    name="email"
+                    class="form-control"
+                  />
+                  <label for="email" class="">Ihre Mail-Adresse</label>
+                </div>
+              </div>
+              <!--Grid column-->
+            </div>
+            <!--Grid row-->
+
+            <!--Grid row-->
+            <div class="row">
+              <div class="col-md-12">
+                <div class="md-form mb-0">
+                  <select
+                    formControlName="contactFormSubjects"
+                    class="browser-default custom-select mb-4"
+                  >
+                    <option value="" disabled>Eine Option wählen</option>
+                    <option value="1" selected>App Developing</option>
+                    <option value="1" selected>Webpage Developing</option>
+                    <option value="1" selected>Design Developing</option>
+                    <option value="1" selected>Feedback</option>
+                    <option value="2">Report a bug</option>
+                    <option value="3">Feature request</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <!--Grid row-->
+
+            <!--Grid row-->
+            <div class="row">
+              <!--Grid column-->
+              <div class="col-md-12">
+                <div class="md-form">
+                  <textarea
+                    formControlName="contactFormMessage"
+                    type="text"
+                    id="defaultContactFormMessage"
+                    name="message"
+                    rows="2"
+                    class="form-control md-textarea"
+                  ></textarea>
+                  <label for="message">Ihre Nachricht an uns</label>
+                </div>
+              </div>
+            </div>
+            <!--Grid row-->
+          </form>
+
+          <div class="text-center text-md-left">
+            <div
+              role="button"
+              class="formButtons"
+              (click)="sendContactForm()"
+            >
+              <h5>Absenden!</h5>
+            </div>
+          </div>
+
+          <div class="status"></div>
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-md-3 text-center">
+          <ul class="list-unstyled mb-0">
+            <li>
+              <i class="fas fa-map-marker-alt fa-2x"></i>
+              <p>Wels & Pollham, Oberösterreich</p>
+            </li>
+
+            <li>
+              <i class="fas fa-phone mt-4 fa-2x"></i>
+              <p>+43 664 537 52 55</p>
+            </li>
+
+            <li>
+              <i class="fas fa-envelope mt-4 fa-2x"></i>
+              <p>info@mstingray-software.eu</p>
+            </li>
+          </ul>
+        </div>
+        <!--Grid column-->
+      </div>
+    </section>
+    <!--Section: Contact v.2-->
+  </section>
+</div>
