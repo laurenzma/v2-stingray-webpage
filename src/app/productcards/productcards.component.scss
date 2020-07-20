@@ -1,22 +1,31 @@
 .imgContainer {
   position: relative;
   text-align: center;
-  color: white;
 }
 
 .top-left {
   font-size: 2vw;
-    position: absolute;
+  position: absolute;
   top: 8px;
   left: 16px;
+  color: white;
 }
 
-#productsRow{
-overflow: visible;
+#productsRow {
+  padding-bottom: 5%;
+  height: 100%;
+  overflow: visible;
+  background-color: white;
+  position: relative;
 }
 
-#headerRow{
-margin-left: auto;
-margin-right: auto;
+#headerRow {
+  margin-left: auto;
+  margin-right: auto;
 }
 
+#introText {
+  text-align: center;
+  padding-bottom: 5%;
+  padding-top: 5%;
+}
